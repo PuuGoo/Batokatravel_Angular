@@ -22,15 +22,13 @@
                     Tất cả chuyến du lịch
                   </button>
                   <ul class="dropdown-menu">
+                    @for(catelogy of catelogy; track catelogy) {
                     <li>
-                      <a class="dropdown-item" href="catelogies">Vietnam</a>
+                      <a class="dropdown-item" href="catelogies">{{
+                        catelogy.name
+                      }}</a>
                     </li>
-                    <li>
-                      <a class="dropdown-item" href="catelogies">Thailand </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="catelogies">Australia </a>
-                    </li>
+                    }
                   </ul>
                 </div>
                 <div class="position-relative w-100">
@@ -93,17 +91,13 @@
               Chuyến đi
             </button>
             <ul class="dropdown-menu">
+              @for (catelogy of catelogy; track catelogy) {
               <li>
-                <a class="dropdown-item fs-5" href="catelogies">Vietnam</a>
+                <a class="dropdown-item fs-5" href="catelogies">{{
+                  catelogy.name
+                }}</a>
               </li>
-              <li>
-                <a class="dropdown-item fs-5" href="catelogies">Thailand </a>
-              </li>
-              <li>
-                <a class="dropdown-item fs-5" href="catelogies"
-                  >Australia
-                </a>
-              </li>
+              }
             </ul>
           </div>
           <li class="nav-item">

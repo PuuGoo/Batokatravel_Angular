@@ -8,7 +8,6 @@
     }
   }
 </style>
-
 <!-- Banner -->
 <div class="site-banner">
   <div class="container">
@@ -254,84 +253,11 @@
         </div>
       </div>
       <div class="row mt-lg-0 mt-4">
-        <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4">
-          <a class="card nav-link" [routerLink]="['catelogies']">
-            <img
-              class="card-img-top img-fluid"
-              src="https://flagicons.lipis.dev/flags/4x3/vn.svg"
-              alt="Title"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Việt Nam</h4>
-              <p class="card-text">14 địa điểm</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4">
-          <a href="catelogies" class="card nav-link">
-            <img
-              class="card-img-top img-fluid"
-              src="https://flagicons.lipis.dev/flags/4x3/th.svg"
-              alt="Title"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Thái Lan</h4>
-              <p class="card-text">20 địa điểm</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4">
-          <a href="catelogies" class="card nav-link">
-            <img
-              class="card-img-top img-fluid"
-              src="https://flagicons.lipis.dev/flags/4x3/au.svg"
-              alt="Title"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Úc</h4>
-              <p class="card-text">20 địa điểm</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4">
-          <a href="catelogies" class="card nav-link">
-            <img
-              class="card-img-top img-fluid"
-              src="https://flagicons.lipis.dev/flags/4x3/la.svg"
-              alt="Title"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Lào</h4>
-              <p class="card-text">7 địa điểm</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4">
-          <a href="catelogies" class="card nav-link">
-            <img
-              class="card-img-top img-fluid"
-              src="https://flagicons.lipis.dev/flags/4x3/ar.svg"
-              alt="Title"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Argentina</h4>
-              <p class="card-text">10 địa điểm</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4">
-          <a href="catelogies" class="card nav-link">
-            <img
-              class="card-img-top img-fluid"
-              src="https://flagicons.lipis.dev/flags/4x3/br.svg"
-              alt="Title"
-            />
-            <div class="card-body">
-              <h4 class="card-title">Brazil</h4>
-              <p class="card-text">17 địa điểm</p>
-            </div>
-          </a>
-        </div>
+        <app-catelogy-card
+          *ngFor="let catelogy of catelogies"
+          [catelogy]="catelogy"
+          class="col-lg-2 col-md-4 col-6 mb-lg-0 mb-4"
+        ></app-catelogy-card>
       </div>
       <div
         class="progress mt-3"

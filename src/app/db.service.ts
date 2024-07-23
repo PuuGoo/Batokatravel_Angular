@@ -1,9 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Db } from './db';
+import { Catelogy } from './db';
 @Injectable({
   providedIn: 'root',
 })
-export class DbService {
+export class CatelogyService {
   urlCatelogy = 'http://localhost:3000/catelogies';
-  constructor() {}
+  async getAllCatelogies(): Promise<Catelogy[]> {
+    const data = await fetch(this.urlCatelogy);
+    return (await data.json()) ?? {};
+  }
+}
+
+export class TourTravelService {
+  urlTourTravelService = 'http://localhost:3000/tourtravel';
 }
