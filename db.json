@@ -1,0 +1,40 @@
+{
+  "catelogies": [
+    {
+      "id": 1,
+      "name": "Việt Nam",
+      "image": "https://flagicons.lipis.dev/flags/4x3/vn.svg",
+      "storage": 14
+    },
+    {
+      "id": 2,
+      "name": "Thái Lan",
+      "image": "https://flagicons.lipis.dev/flags/4x3/th.svg",
+      "storage": 20
+    },
+    {
+      "id": 3,
+      "name": "Úc",
+      "image": "https://flagicons.lipis.dev/flags/4x3/au.svg",
+      "storage": 20
+    },
+    {
+      "id": 4,
+      "name": "Lào",
+      "image": "https://flagicons.lipis.dev/flags/4x3/la.svg",
+      "storage": 7
+    },
+    {
+      "id": 5,
+      "name": "Argentina",
+      "image": "https://flagicons.lipis.dev/flags/4x3/ar.svg",
+      "storage": 10
+    },
+    {
+      "id": 6,
+      "name": "Brazil",
+      "image": "https://flagicons.lipis.dev/flags/4x3/br.svg",
+      "storage": 17
+    }
+  ]
+}

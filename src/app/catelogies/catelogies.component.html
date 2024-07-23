@@ -1,0 +1,733 @@
+
+
+<main>
+  <div class="container">
+    <section class="site-catelogy sc mt-5">
+      <div class="sc-sort d-flex align-items-center justify-content-end">
+        <p class="text-secondary h-100 m-0 me-3 d-none d-lg-block d-md-block">
+          Sắp xếp theo:
+        </p>
+        <div class="dropdown">
+          <button
+            class="btn btn-outline-primary dropdown-toggle"
+            type="button"
+            id="triggerId"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Sản phẩm liên quan
+          </button>
+          <div class="dropdown-menu" aria-labelledby="triggerId">
+            <a class="dropdown-item" href="#">Sắp xếp theo tên A-Z</a>
+            <a class="dropdown-item" href="#">Sắp xếp theo tên Z-A</a>
+            <a class="dropdown-item" href="#">Sắp xếp giá tăng dần</a>
+            <a class="dropdown-item" href="#">Sắp xếp giá giảm dần</a>
+            <a class="dropdown-item" href="#">Sắp xếp sản phẩm nổi bật</a>
+            <a class="dropdown-item" href="#">Sắp xếp sản phẩm phổ biến</a>
+            <a class="dropdown-item" href="#">Sắp xếp sản phẩm giảm giá</a>
+          </div>
+        </div>
+        <div class="sc-icon d-flex align-items-center ms-3 p-2 border-start">
+          <div class="sc-i-4 me-2">
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="44" height="44" rx="8" fill="#1E4C2F" />
+              <path
+                d="M32 18.52V13.98C32 12.57 31.36 12 29.77 12H25.73C24.14 12 23.5 12.57 23.5 13.98V18.51C23.5 19.93 24.14 20.49 25.73 20.49H29.77C31.36 20.5 32 19.93 32 18.52Z"
+                fill="white"
+              />
+              <path
+                d="M32 29.77V25.73C32 24.14 31.36 23.5 29.77 23.5H25.73C24.14 23.5 23.5 24.14 23.5 25.73V29.77C23.5 31.36 24.14 32 25.73 32H29.77C31.36 32 32 31.36 32 29.77Z"
+                fill="white"
+              />
+              <path
+                d="M20.5 18.52V13.98C20.5 12.57 19.86 12 18.27 12H14.23C12.64 12 12 12.57 12 13.98V18.51C12 19.93 12.64 20.49 14.23 20.49H18.27C19.86 20.5 20.5 19.93 20.5 18.52Z"
+                fill="white"
+              />
+              <path
+                d="M20.5 29.77V25.73C20.5 24.14 19.86 23.5 18.27 23.5H14.23C12.64 23.5 12 24.14 12 25.73V29.77C12 31.36 12.64 32 14.23 32H18.27C19.86 32 20.5 31.36 20.5 29.77Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="sc-i-3">
+            <svg
+              width="46"
+              height="46"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="1"
+                y="1"
+                width="44"
+                height="44"
+                rx="8"
+                stroke="#E4E9EE"
+              />
+              <path
+                d="M14 18H32"
+                stroke="#0B0F0E"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M14 23H32"
+                stroke="#0B0F0E"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M14 28H32"
+                stroke="#0B0F0E"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="sc-body mt-4">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 d-none d-lg-block d-md-block">
+            <div class="sc-filter border rounded-3 p-3">
+              <h4 class="border-bottom pb-3">Các gợi ý lựa chọn</h4>
+              <div class="sc-filter-item border-bottom pb-3 mt-3">
+                <p class="d-inline-flex gap-1" style="width: 100%">
+                  <a
+                    class="btn w-100 text-start p-0 fs-6 fw-bold d-flex align-items-center justify-content-between"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample"
+                  >
+                    Quốc gia<i class="fa-solid fa-chevron-up fa-sm"></i>
+                  </a>
+                </p>
+                <div class="collapse show" id="collapseExample">
+                  <div class="card card-body border-0 p-0">
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Việt Nam
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Thái Lan
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Úc
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Lào
+                        </label>
+                      </div>
+                    </div>
+                    <a
+                      href="#"
+                      class="text-success fw-bold text-decoration-none"
+                      >Hiển thị tất cả</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="sc-filter-item border-bottom pb-3 mt-3">
+                <p class="d-inline-flex gap-1" style="width: 100%">
+                  <a
+                    class="btn w-100 text-start p-0 fs-6 fw-bold d-flex align-items-center justify-content-between"
+                    data-bs-toggle="collapse"
+                    href="#collapseExample2"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="collapseExample2"
+                  >
+                    Thành phố<i class="fa-solid fa-chevron-up fa-sm"></i>
+                  </a>
+                </p>
+                <div class="collapse show" id="collapseExample2">
+                  <div class="card card-body border-0 p-0">
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Đà Nẵng
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Chiang Mai
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Gippsland
+                        </label>
+                      </div>
+                    </div>
+                    <div class="sc-filter-item-checkbox">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckDefault"
+                        />
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Muang Xai
+                        </label>
+                      </div>
+                    </div>
+                    <a
+                      href="#"
+                      class="text-success fw-bold text-decoration-none"
+                      >Hiển thị tất cả</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8">
+            <div class="row">
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      1.000.000 VND
+                      <del class="h6 text-secondary">1.100.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Việt Nam</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Đà Nẵng
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        4 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >10%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      2.000.000 VND
+                      <del class="h6 text-secondary">2.300.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Thái Lan</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Chiang Mai
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        3 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >15%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      4.000.000 VND
+                      <del class="h6 text-secondary">4.800.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Úc</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Gippsland
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        5 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >20%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSuWlU6WKPAmsQ0YwKARbu0TzL3ZwPVgy_N_F8KRDVVFztyz38Ncna5R8JwOX7oTQwvmMRvN3Ro6eut042zt5kG9JD8aP3IpXYoKZ91Bg"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      5.000.000 VND
+                      <del class="h6 text-secondary">6.250.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Lào</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Muang Xai
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        4 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >25%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/138359955.jpg?k=a64a82775de014c4cfa97df25d4a994df6b2df751505641fd5349bf413f3c195&o=&s=600x"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      6.000.000 VND
+                      <del class="h6 text-secondary">7.200.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Argentina</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Pinamar
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        3 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >20%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/546883566.jpg?k=71c1abc15f3b0c465c76650fff0341d47fd1bcb81d523f9f68076c31f80591e0&o=&s=600x"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      8.000.000 VND
+                      <del class="h6 text-secondary">10.000.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Brazil</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Gramado
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        7 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >25%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/365811879.jpg?k=9122d89251e088b8a977b3a02989ff12e6ebeb6688f1811581dcad564ee490c6&o=&s=600x"
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      9.000.000 VND
+                      <del class="h6 text-secondary">9.900.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Pháp</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Saverdun
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        5 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >10%
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="detailprod"
+                class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+              >
+                <div class="card position-relative">
+                  <img
+                    class="card-img-top"
+                    src="https://q-xx.bstatic.com/xdata/images/hotel/max300/139290143.jpg?k=c059dc24edb1511b0df2aa2552c5273cdae273d18f4fa3dfedd8e788398e2667&o="
+                    alt="Title"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <p class="card-text text-primary h5">
+                      10.000.000 VND
+                      <del class="h6 text-secondary">11.500.000 VND</del>
+                    </p>
+                    <h4 class="card-title">Khám phá Đức</h4>
+                    <div
+                      class="progress"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                      style="height: 1px"
+                    >
+                      <div class="progress-bar" style="width: 0"></div>
+                    </div>
+                    <div
+                      class="pt-address pta d-flex align-items-center justify-content-between mt-3"
+                    >
+                      <div class="pta-geo me-3">
+                        <i
+                          class="fa-solid fa-location-dot"
+                          style="color: #001eff"
+                        ></i>
+                        Thành Phố Wiek
+                      </div>
+                      <div class="pta-date">
+                        <i class="fa-solid fa-clock" style="color: #0008ff"></i>
+                        4 ngày
+                      </div>
+                    </div>
+                    <div
+                      class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
+                      style="top: 16px; right: 16px"
+                    >
+                      <i
+                        class="fa-brands fa-salesforce me-1"
+                        style="color: #ff0000"
+                      ></i
+                      >15%
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination pagination-lg-lg">
+                    <li class="page-item">
+                      <a class="page-link" href="#">Trang trước</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Trang sau</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
