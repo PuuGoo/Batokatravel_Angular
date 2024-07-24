@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
-import { Catelogy } from './db';
+import { Catelogy, Product } from './db';
 @Injectable({
   providedIn: 'root',
 })
 export class CatelogyService {
-  urlCatelogy = 'http://localhost:3000/catelogies';
+  url = 'http://localhost:3000/catelogies';
   async getAllCatelogies(): Promise<Catelogy[]> {
-    const data = await fetch(this.urlCatelogy);
+    const data = await fetch(this.url);
     return (await data.json()) ?? {};
   }
 }
 
-export class TourTravelService {
-  urlTourTravelService = 'http://localhost:3000/tourtravel';
+export class ProductService {
+  url = 'http://localhost:3000/products';
+
+  async getAllProducts(): Promise<Product[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? {};
+  }
 }

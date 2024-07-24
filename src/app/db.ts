@@ -5,3 +5,16 @@ export interface Catelogy {
   storage: number;
   isFeatured: boolean;
 }
+
+export interface Product {
+  id: number;
+  price: number;
+  price_sale: number;
+  name: string;
+  location: string;
+  time: number;
+  images: string;
+  rate_sale: number;
+  isSale: boolean;
+  isFeatured: boolean;
+}
