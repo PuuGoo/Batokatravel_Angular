@@ -16,41 +16,29 @@
         <div class="col-lg-6">
           <div id="carouselExampleIndicators" class="carousel slide h-100">
             <div class="carousel-inner border-0 rounded-2" style="width: 645px">
+              @for(i of [1,2,3,4]; track i) { @if(i == 1) {
               <div
                 class="carousel-item active"
                 style="min-height: 424px !important"
               >
                 <img
-                  src="https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x"
+                  src="{{productById?.images?.[0]}}"
                   class="d-block w-100"
                   alt="..."
                   style="height: 424px !important"
                 />
               </div>
+              } @else {
               <div class="carousel-item" style="min-height: 424px !important">
                 <img
-                  src="https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
+                  src="{{productById?.images?.[0]}}"
                   class="d-block w-100"
                   alt="..."
                   style="height: 424px !important"
                 />
               </div>
-              <div class="carousel-item" style="min-height: 424px !important">
-                <img
-                  src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSuWlU6WKPAmsQ0YwKARbu0TzL3ZwPVgy_N_F8KRDVVFztyz38Ncna5R8JwOX7oTQwvmMRvN3Ro6eut042zt5kG9JD8aP3IpXYoKZ91Bg"
-                  class="d-block w-100"
-                  alt="..."
-                  style="height: 424px !important"
-                />
-              </div>
-              <div class="carousel-item" style="min-height: 424px !important">
-                <img
-                  src="https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-                  class="d-block w-100"
-                  alt="..."
-                  style="height: 424px !important"
-                />
-              </div>
+              } }
+
               <button
                 class="carousel-control-prev d-none d-lg-block d-md-block"
                 type="button"
@@ -81,9 +69,10 @@
               style="bottom: -190px; left: 0"
             >
               <div class="row">
+                @for(i of [1,2,3,4]; track i;) {
                 <div class="col-3">
                   <img
-                    src="https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x"
+                    src="{{productById?.images?.[0]}}"
                     data-bs-target="#carouselExampleIndicators"
                     data-bs-slide-to="0"
                     class="active border-0 rounded-2 m-0 img-fluid img-lg-none h-100 h-lg-100"
@@ -92,53 +81,24 @@
                     aria-label="Slide 1"
                   />
                 </div>
-                <div class="col-3">
-                  <img
-                    src="https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    class="border-0 rounded-2 m-0 img-fluid img-lg-none h-100 h-lg-100"
-                    style="width: 150px; height: 150px"
-                    aria-label="Slide 2"
-                  />
-                </div>
-                <div class="col-3">
-                  <img
-                    src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSuWlU6WKPAmsQ0YwKARbu0TzL3ZwPVgy_N_F8KRDVVFztyz38Ncna5R8JwOX7oTQwvmMRvN3Ro6eut042zt5kG9JD8aP3IpXYoKZ91Bg"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    class="border-0 rounded-2 m-0 img-fluid img-lg-none h-100 h-lg-100"
-                    style="width: 150px; height: 150px"
-                    aria-label="Slide 3"
-                  />
-                </div>
-                <div class="col-3">
-                  <img
-                    src="https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="3"
-                    class="border-0 rounded-2 m-0 img-fluid img-lg-none h-100 h-lg-100"
-                    style="width: 150px; height: 150px"
-                    aria-label="Slide 3"
-                  />
-                </div>
+                }
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <h2 class="h2-lg h2-md h3 mt-lg-0 mt-3">
-            Tour du lịch Đà Lạt 4 ngày 3 đêm
+            {{ productById?.name }}
           </h2>
           <div class="dp-rate">
             <i class="fa-solid fa-star me-2 my-3" style="color: #ffd43b"></i>4.8
             <span class="h6 text-secondary ms-3">8 suất</span>
           </div>
-          <div class="dp-price text-success fw-bold">5.000.000 VND</div>
+          <div class="dp-price text-success fw-bold">
+            {{ productById?.price }} VND
+          </div>
           <div class="dp-desr mt-3">
-            Tour Đà Lạt 4 ngày 3 đêm sẽ giúp Quý khách tới một thành phố Đà Lạt
-            với cảnh sắc thiên nhiên làm say lòng người và những nét văn hóa,
-            lịch sử độc đáo
+            {{ productById?.location }}
           </div>
           <div class="mb-3 mt-3">
             <label for="" class="form-label fw-bold">Số lượng</label>

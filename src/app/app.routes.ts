@@ -48,7 +48,7 @@ export const routes: Routes = [
     title: 'Contact page',
   },
   {
-    path: 'detailprod',
+    path: 'detailprod/:id',
     component: DetailprodComponent,
     title: 'Detail prod page',
   },
