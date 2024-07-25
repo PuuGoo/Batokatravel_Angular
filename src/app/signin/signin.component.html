@@ -5,9 +5,6 @@
       style=""
     >
       <form [formGroup]="applySignInForm" (submit)="submitSignInForm()">
-        <div *ngIf="applySignInForm.controls.email.">
-          Email is required!
-        </div>
         <div class="border rounded-2 p-4" style="width: fit-content">
           <div class="ssu-title h2 text-center">Đăng nhập</div>
           <div class="input-group mb-3" style="width: 392px">
@@ -20,6 +17,14 @@
               class="form-control w-100"
               placeholder="Vui lòng nhập email"
             />
+            <div class="text-danger mt-1">
+              @if (applySignInForm.controls['email'].touched &&
+              applySignInForm.controls['email'].errors?.['required']) {
+              <span>Email không được bỏ trống</span>
+              } @else if (applySignInForm.controls['email'].errors?.['email']) {
+              <span>Email cần nhập đúng định dạng</span>
+              }
+            </div>
           </div>
           <div class="input-group mb-16" style="width: 392px">
             <label for="" class="mb-2 h6">Mật khẩu</label>
@@ -31,6 +36,15 @@
               class="form-control w-100"
               placeholder="Vui lòng nhập mật khẩu"
             />
+            <div class="text-danger mt-1">
+              @if (applySignInForm.controls['pass'].touched &&
+              applySignInForm.controls['pass'].errors?.['required']) {
+              <span>Password không được bỏ trống</span>
+              } @else if (applySignInForm.controls['pass'].touched &&
+              applySignInForm.controls['pass'].invalid) {
+              <span>Password cần ít nhất 12 ký tự</span>
+              }
+            </div>
           </div>
           <a href="forgotpassword" class="text-decoration-none">
             <div class="ssu-sign-up h6 text-end mb-2 text-primary my-2">
@@ -41,6 +55,7 @@
             <button type="submit" class="btn btn-primary mb-3 w-100">
               Đăng nhập
             </button>
+
             <a href="signup">
               <button type="button" class="btn btn-outline-primary w-100">
                 Đăng ký

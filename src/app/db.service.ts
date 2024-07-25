@@ -27,10 +27,6 @@ export class ProductService {
 
 export class FormSignin {
   submitApplication(email: string, pass: string) {
-    console.log(
-      `
-        Form Sign In received date : ${email} - ${pass}
-      `
-    );
+    console.log(`Form Sign In received date : ${email} - ${pass}`);
   }
 }
