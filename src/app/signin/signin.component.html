@@ -7,6 +7,11 @@
       <form [formGroup]="applySignInForm" (submit)="submitSignInForm()">
         <div class="border rounded-2 p-4" style="width: fit-content">
           <div class="ssu-title h2 text-center">Đăng nhập</div>
+          @if (this.isCheckLogin == "false") {
+          <div class="text-center text-danger fw-bold">
+            Tài khoản và mật khẩu không đúng!
+          </div>
+          }
           <div class="input-group mb-3" style="width: 392px">
             <label for="" class="mb-2 h6">Email</label>
             <input
@@ -42,7 +47,10 @@
               <span>Password không được bỏ trống</span>
               } @else if (applySignInForm.controls['pass'].touched &&
               applySignInForm.controls['pass'].invalid) {
-              <span>Mật khẩu cần ít nhất 1 ký tự thường, 1 ký tự viết hoa, 1 ký tự đặc biệt và ít nhất 12 ký tự</span>
+              <span
+                >Mật khẩu cần ít nhất 1 ký tự thường, 1 ký tự viết hoa, 1 ký tự
+                đặc biệt và ít nhất 12 ký tự</span
+              >
               }
             </div>
           </div>
@@ -53,7 +61,7 @@
             </div>
           </a>
           <div class="ssu-button w-100">
-            <button [disabled]="!applySignInForm.valid" type="submit" class="btn btn-primary mb-3 w-100">
+            <button type="submit" class="btn btn-primary mb-3 w-100">
               Đăng nhập
             </button>
 

@@ -58,7 +58,8 @@
       "location": "Thành Phố Đà Nẵng",
       "time": 4,
       "images": [
-        "https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x","https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
+        "https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x",
+        "https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
       ],
       "rate_sale": 10,
       "isSale": true,
@@ -273,6 +274,26 @@
       "rate_sale": 0,
       "isSale": false,
       "isPopular": true
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "user01@gmail.com",
+      "password": "User01@batokatravel",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "user02@gmail.com",
+      "password": "User02@batokatravel",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "user03@gmail.com",
+      "password": "User03@batokatravel",
+      "role": "admin"
     }
   ]
 }

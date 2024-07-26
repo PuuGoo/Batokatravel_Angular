@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Catelogy, Product } from './db';
+import { Catelogy, Product, User } from './db';
 @Injectable({
   providedIn: 'root',
 })
@@ -29,4 +29,16 @@ export class FormSignin {
   submitApplication(email: string, pass: string) {
     console.log(`Form Sign In received date : ${email} - ${pass}`);
   }
+}
+
+export class UserService {
+  url = 'http://localhost:3000/users';
+
+  async getAllUsers(): Promise<User[]> {
+    const data = await fetch(this.url);
+    return (await data.json()) ?? {};
+  }
+
+  
+
 }
