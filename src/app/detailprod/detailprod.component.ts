@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../db';
-import { ProductService } from '../db.service';
 import { CommonModule } from '@angular/common';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-detailprod',
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './detailprod.component.html',
   styleUrl: './detailprod.component.css',
-  providers: [ProductService],
+  providers: [],
 })
 export class DetailprodComponent {
   route: ActivatedRoute = inject(ActivatedRoute);

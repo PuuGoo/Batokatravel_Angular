@@ -1,10 +1,11 @@
 import { Component, Input, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Catelogy, Product } from '../db';
-import { CatelogyService, ProductService } from '../db.service';
 import { CatelogyCardComponent } from '../catelogy-card/catelogy-card.component';
 import { CommonModule } from '@angular/common';
 import { ProductCartComponent } from '../product-cart/product-cart.component';
+import { ProductService } from '../services/product.service';
+import { CatelogyService } from '../services/catelogy.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,7 +17,7 @@ import { ProductCartComponent } from '../product-cart/product-cart.component';
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  providers: [CatelogyService, ProductService],
+  providers: [],
 })
 export class HomeComponent {
   catelogies: Catelogy[] = [];

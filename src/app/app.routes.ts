@@ -11,6 +11,7 @@ import { DetailprodComponent } from './detailprod/detailprod.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { LogoutComponent } from './logout/logout.component';
 export const routes: Routes = [
   {
     path: 'addressShipping',
@@ -71,6 +72,11 @@ export const routes: Routes = [
     path: 'signup',
     component: SignupComponent,
     title: 'Sign up page',
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
+    title: 'Logout page',
   },
   {
     path: '**',

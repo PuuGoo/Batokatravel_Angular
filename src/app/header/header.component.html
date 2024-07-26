@@ -51,9 +51,20 @@
             <a class="nav-link" href="cart"
               ><i class="bi bi-cart me-4 fs-4"></i
             ></a>
-            <a class="nav-link" href="signin"
-              ><i class="bi bi-person-circle fs-4"></i
-            ></a>
+            <div class="dropdown">
+              <button
+                class="border-0 bg-white"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-circle fs-4"></i>
+              </button>
+              <ul class="dropdown-menu" style="width: fit-content">
+                <li><a class="dropdown-item" href="signin">Đăng nhập</a></li>
+                <li><a class="dropdown-item" href="logout">Đăng xuất</a></li>
+              </ul>
+            </div>
           </div>
           <div class="d-block d-lg-none">
             <i class="fa-solid fa-bars fs-4"></i>

@@ -294,6 +294,12 @@
       "username": "user03@gmail.com",
       "password": "User03@batokatravel",
       "role": "admin"
+    },
+    {
+      "id": "4",
+      "username": "user04@gmail.com",
+      "password": "User04@batokatravel",
+      "role": "admin"
     }
   ]
 }

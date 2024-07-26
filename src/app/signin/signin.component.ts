@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { FormSignin, UserService } from '../db.service';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -11,6 +10,7 @@ import {
 import { CommonModule, JsonPipe } from '@angular/common';
 import { User } from '../db';
 import { Router, RouterModule } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-signin',
@@ -18,12 +18,11 @@ import { Router, RouterModule } from '@angular/router';
   imports: [ReactiveFormsModule, CommonModule, JsonPipe, RouterModule],
   templateUrl: './signin.component.html',
   styleUrl: './signin.component.css',
-  providers: [FormSignin, UserService],
+  providers: [],
 })
 export class SigninComponent {
-  formSignInService: FormSignin = inject(FormSignin);
   userService: UserService = inject(UserService);
-  isCheckLogin = "";
+  isCheckLogin = '';
 
   submitSignInForm() {
     this.userService.getAllUsers().then((users) => {
@@ -33,10 +32,14 @@ export class SigninComponent {
           user.password == this.applySignInForm.value.pass
         );
       });
-      foundUser.length !== 0
-        ? (this.isCheckLogin = "true")
-        : (this.isCheckLogin = "false");
-      if (this.isCheckLogin == "true") {
+      if (foundUser.length !== 0) {
+        this.isCheckLogin = 'true';
+        localStorage.setItem('isLogin', this.isCheckLogin);
+      } else {
+        this.isCheckLogin = 'false';
+        localStorage.setItem('isLogin', this.isCheckLogin);
+      }
+      if (this.isCheckLogin == 'true') {
         this._router.navigateByUrl('');
       } else {
         this._router.navigateByUrl('signin');
@@ -85,6 +88,9 @@ export class SigninComponent {
   //   });
   //   return foundUser;
   // }
-
-  constructor(private _router: Router) {}
+  constructor(private _router: Router) {
+    if (localStorage.getItem('isLogin') == 'true') {
+      this._router.navigateByUrl('');
+    }
+  }
 }

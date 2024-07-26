@@ -4,8 +4,9 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Catelogy } from './db';
-import { CatelogyService } from './db.service';
 import { CommonModule } from '@angular/common';
+import { SigninComponent } from './signin/signin.component';
+import { CatelogyService } from './services/catelogy.service';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   catelogies: Catelogy[] = [];
   dbService: CatelogyService = inject(CatelogyService);
+  isCheckLogin: string = '';
 
   constructor() {
     this.dbService.getAllCatelogies().then((catelogies: Catelogy[]) => {
