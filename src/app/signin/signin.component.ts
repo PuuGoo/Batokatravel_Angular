@@ -34,7 +34,7 @@ export class SigninComponent {
   //   pass: new FormControl('', [
   //     Validators.required,
   //     Validators.pattern(
-  //       '^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*W)(?!.* ).{8,16}$'
+  //       '^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*W)(?!.* ).{6,12}$'
   //     ),
   //   ]),
   // });
@@ -57,7 +57,8 @@ export class SigninComponent {
     const hasUpper = /[A-Z]/.test(password);
     const hasSymbol = /[!@#$%^&*]/.test(password);
 
-    const valid = hasNumber && hasUpper && hasLower && hasSymbol;
+    const valid =
+      hasNumber && hasUpper && hasLower && hasSymbol && password.length >= 12;
     return valid ? null : { passwordStrength: true };
   }
 }

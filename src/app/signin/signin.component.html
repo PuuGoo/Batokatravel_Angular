@@ -42,17 +42,18 @@
               <span>Password không được bỏ trống</span>
               } @else if (applySignInForm.controls['pass'].touched &&
               applySignInForm.controls['pass'].invalid) {
-              <span>Password cần ít nhất 12 ký tự</span>
+              <span>Mật khẩu cần ít nhất 1 ký tự thường, 1 ký tự viết hoa, 1 ký tự đặc biệt và ít nhất 12 ký tự</span>
               }
             </div>
           </div>
+
           <a href="forgotpassword" class="text-decoration-none">
             <div class="ssu-sign-up h6 text-end mb-2 text-primary my-2">
               Quên mật khẩu?
             </div>
           </a>
           <div class="ssu-button w-100">
-            <button type="submit" class="btn btn-primary mb-3 w-100">
+            <button [disabled]="!applySignInForm.valid" type="submit" class="btn btn-primary mb-3 w-100">
               Đăng nhập
             </button>
 
