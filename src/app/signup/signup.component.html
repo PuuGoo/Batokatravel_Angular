@@ -1,41 +1,59 @@
-    <main>
-        <div class="container">
-            <div class="site-sign-up d-flex align-items-center justify-content-center mt-5 mb-5" style="">
-                <form action="signin_" method="post">
-                    <div class="border rounded-2 p-4" style="width: fit-content">
-                        <div class="ssu-title h2 text-center">Đăng ký</div>
-                        <div class="input-group mb-3" style="width: 392px">
-                            <label for="" class="mb-2 h6">Email</label>
-                            <input type="email" name="email" id="" class="form-control w-100"
-                                placeholder="Vui lòng nhập email" />
-                        </div>
-                        <div class="input-group mb-2" style="width: 392px">
-                            <label for="" class="mb-2 h6">Mật khẩu</label>
-                            <input type="password" name="password" id="" class="form-control w-100"
-                                placeholder="Vui lòng nhập mật khẩu" />
-                        </div>
-                        <div class="input-group mb-2" style="width: 392px">
-                            <label for="" class="mb-2 h6">Nhập Lại Mật khẩu</label>
-                            <input type="password" name="password" id="" class="form-control w-100"
-                                placeholder="Vui lòng nhập lại mật khẩu" />
-                        </div>
-                        <a href="forgotpassword" class="text-decoration-none">
-                            <div class="ssu-sign-up h6 text-end mb-2 text-primary my-2">
-                                Quên mật khẩu?
-                            </div>
-                        </a>
-                        <div class="ssu-button w-100">
-                            <button type="submit" class="btn btn-primary mb-3 w-100">
-                                Đăng ký
-                            </button>
-                            <a href="signin">
-                                <button type="button" class="btn btn-outline-primary w-100">
-                                    Quay lại
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </form>
+<main>
+  <div class="container">
+    <div
+      class="site-sign-up d-flex align-items-center justify-content-center mt-5 mb-5"
+      style=""
+    >
+      <form [formGroup]="applySignUpForm" (submit)="submitSignUpForm()">
+        <div class="border rounded-2 p-4" style="width: fit-content">
+          <div class="ssu-title h2 text-center">Đăng ký</div>
+          <div class="input-group mb-3" style="width: 392px">
+            <label for="" class="mb-2 h6">Email</label>
+            <input
+              type="email"
+              formControlName="email"
+              id=""
+              class="form-control w-100"
+              placeholder="Vui lòng nhập email"
+            />
+          </div>
+          <div class="input-group mb-2" style="width: 392px">
+            <label for="" class="mb-2 h6">Mật khẩu</label>
+            <input
+              type="password"
+              formControlName="pass"
+              id=""
+              class="form-control w-100"
+              placeholder="Vui lòng nhập mật khẩu"
+            />
+          </div>
+          <div class="input-group mb-2" style="width: 392px">
+            <label for="" class="mb-2 h6">Nhập Lại Mật khẩu</label>
+            <input
+              type="password"
+              formControlName="confirmpass"
+              id=""
+              class="form-control w-100"
+              placeholder="Vui lòng nhập lại mật khẩu"
+            />
+          </div>
+          <a href="forgotpassword" class="text-decoration-none">
+            <div class="ssu-sign-up h6 text-end mb-2 text-primary my-2">
+              Quên mật khẩu?
             </div>
+          </a>
+          <div class="ssu-button w-100">
+            <button type="submit" class="btn btn-primary mb-3 w-100">
+              Đăng ký
+            </button>
+            <a href="signin">
+              <button type="button" class="btn btn-outline-primary w-100">
+                Quay lại
+              </button>
+            </a>
+          </div>
         </div>
-    </main>
+      </form>
+    </div>
+  </div>
+</main>
