@@ -17,6 +17,7 @@ export interface Product {
   rate_sale: number;
   isSale: boolean;
   isFeatured: boolean;
+  isPopular: boolean;
 }
 
 export interface User {

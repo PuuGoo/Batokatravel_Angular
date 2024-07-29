@@ -63,7 +63,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 2,
@@ -77,13 +78,14 @@
       ],
       "rate_sale": 25,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 3,
       "price": 4800000,
       "price_sale": 4000000,
-      "name": "Khám phá Úc",
+      "name": "Khám phá Úc",
       "location": "Thành Phố Gippsland",
       "time": 5,
       "images": [
@@ -91,7 +93,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 4,
@@ -105,7 +108,8 @@
       ],
       "rate_sale": 15,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 5,
@@ -119,7 +123,8 @@
       ],
       "rate_sale": 20,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 6,
@@ -133,7 +138,8 @@
       ],
       "rate_sale": 25,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 7,
@@ -147,7 +153,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 8,
@@ -161,7 +168,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": 9,
@@ -175,6 +183,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -189,6 +198,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -203,13 +213,14 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
       "id": 12,
       "price": 4000000,
       "price_sale": 0,
-      "name": "Khám phá Lào",
+      "name": "Khám phá Lào",
       "location": "Thành Phố Vang Viêng",
       "time": 4,
       "images": [
@@ -217,6 +228,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -231,6 +243,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -245,6 +258,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -259,6 +273,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -273,6 +288,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     }
   ],

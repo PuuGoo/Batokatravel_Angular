@@ -1,4 +1,4 @@
-<div class="card position-relative">
+<div class="card position-relative h-100">
   <img
     class="card-img-top"
     src="{{ productSale.images[0] }}"
@@ -19,7 +19,7 @@
       >{{ productSale.rate_sale }}%
     </div>
     } @else {
-    <p class="card-text text-primary h5">1.000.000 VND</p>
+    <p class="card-text text-primary h5">{{ productSale.price }} VND</p>
     <div
       class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
       style="top: 16px"
