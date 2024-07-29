@@ -25,3 +25,9 @@ export interface User {
   password: string;
   role: string;
 }
+
+export interface Order {
+  id: number;
+  idProd: Product;
+  quantity: number;
+}

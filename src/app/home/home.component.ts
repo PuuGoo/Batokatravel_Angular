@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { ProductCartComponent } from '../product-cart/product-cart.component';
 import { ProductService } from '../services/product.service';
 import { CatelogyService } from '../services/catelogy.service';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -25,6 +26,7 @@ export class HomeComponent {
   productsPopular: Product[] = [];
   catelogyService: CatelogyService = inject(CatelogyService);
   productService: ProductService = inject(ProductService);
+  userService: UserService = inject(UserService);
 
   constructor() {
     this.catelogyService.getAllCatelogies().then((catelogies: Catelogy[]) => {
@@ -32,7 +34,8 @@ export class HomeComponent {
         (value, index) => value.id <= 6 && value.isFeatured == true
       );
     });
-
+    console.log(this.userService.user);
+    
     this.productService.getAllProducts().then((products: Product[]) => {
       this.productsSale = products.filter(
         (value, index) => value.isSale == true

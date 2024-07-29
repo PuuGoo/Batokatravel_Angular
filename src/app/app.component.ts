@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { SigninComponent } from './signin/signin.component';
 import { CatelogyService } from './services/catelogy.service';
 
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,7 +18,7 @@ import { CatelogyService } from './services/catelogy.service';
     HomeComponent,
     RouterModule,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

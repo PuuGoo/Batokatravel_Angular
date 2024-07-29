@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CatelogiesComponent } from './catelogies/catelogies.component';
 import { AddressShippingComponent } from './address-shipping/address-shipping.component';
@@ -11,7 +11,9 @@ import { DetailprodComponent } from './detailprod/detailprod.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
-import { LogoutComponent } from './logout/logout.component';
+import { inject } from '@angular/core';
+import { LoginType, UserService } from './services/user.service';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
 export const routes: Routes = [
   {
     path: 'addressShipping',
@@ -59,24 +61,49 @@ export const routes: Routes = [
     title: 'Forgot Password page',
   },
   {
+    path: 'changepassword',
+    component: ChangepasswordComponent,
+    title: 'Changep Password page',
+    canActivate: [
+      () => {
+        const router: Router = inject(Router);
+        const auth = inject(UserService);
+        if (auth.userLogin.value == LoginType.Login) {
+          return true;
+        } else {
+          router.navigateByUrl('/signin');
+          return false;
+        }
+      },
+    ],
+  },
+  {
     path: '',
     component: HomeComponent,
     title: 'Home page',
+    canActivate: [() => true],
   },
   {
     path: 'signin',
     component: SigninComponent,
     title: 'Sign in page',
+    canActivate: [
+      () => {
+        const router: Router = inject(Router);
+        const auth = inject(UserService);
+        if (auth.userLogin.value == LoginType.NotLogin) {
+          return true;
+        } else {
+          router.navigateByUrl('');
+          return false;
+        }
+      },
+    ],
   },
   {
     path: 'signup',
     component: SignupComponent,
     title: 'Sign up page',
-  },
-  {
-    path: 'logout',
-    component: LogoutComponent,
-    title: 'Logout page',
   },
   {
     path: '**',

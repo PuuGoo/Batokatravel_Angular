@@ -87,52 +87,58 @@
           </div>
         </div>
         <div class="col-lg-6">
-          <h2 class="h2-lg h2-md h3 mt-lg-0 mt-3">
-            {{ productById?.name }}
-          </h2>
-          <div class="dp-rate">
-            <i class="fa-solid fa-star me-2 my-3" style="color: #ffd43b"></i>4.8
-            <span class="h6 text-secondary ms-3">8 suất</span>
-          </div>
-          <div class="dp-price text-success fw-bold">
-            {{ productById?.price }} VND
-          </div>
-          <div class="dp-desr mt-3">
-            {{ productById?.location }}
-          </div>
-          <div class="mb-3 mt-3">
-            <label for="" class="form-label fw-bold">Số lượng</label>
-            <select
-              class="form-select form-select-lg w-lg-25 w-md-25 w-50"
-              name=""
-              id=""
+          <form [formGroup]="orderApply" (submit)="orderSubmit()">
+            <h2 class="h2-lg h2-md h3 mt-lg-0 mt-3">
+              {{ productById?.name }}
+            </h2>
+            <div class="dp-rate">
+              <i class="fa-solid fa-star me-2 my-3" style="color: #ffd43b"></i
+              >4.8
+              <span class="h6 text-secondary ms-3">8 suất</span>
+            </div>
+            <div class="dp-price text-success fw-bold">
+              {{ productById?.price }} VND
+            </div>
+            <div class="dp-desr mt-3">
+              {{ productById?.location }}
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="" class="form-label fw-bold">Số lượng</label>
+              <select
+                class="form-select form-select-lg w-lg-25 w-md-25 w-50"
+                formControlName="quantity"
+                id=""
+              >
+                <option value="1" selected >1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary btn-lg w-100 dp-btn-cart"
             >
-              <option selected>1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-            </select>
-          </div>
-          <a href="cart" class="btn btn-primary btn-lg w-100 dp-btn-cart"
-            ><i class="fa-solid fa-cart-shopping me-2"></i>Thêm vô giỏ hàng</a
-          >
+              <i class="fa-solid fa-cart-shopping me-2"></i>Thêm vô giỏ hàng
+            </button>
+          </form>
         </div>
       </div>
       <div class="row mt-4 ms-0">
         <nav id="navbar-example02" class="navbar bg-body-tertiary px-3 mb-3">
           <ul class="nav nav-pills w-100">
             <li class="nav-item col-lg-4 col-12">
-              <a class="nav-link" href="#scrollspyHeading01"
+              <a class="nav-link" routerLink="/#scrollspyHeading01"
                 >Thông tin chi tiết chuyến đi</a
               >
             </li>
             <li class="nav-item col-lg-4 col-12">
-              <a class="nav-link" href="#scrollspyHeading02"
+              <a class="nav-link" routerLink="/#scrollspyHeading02"
                 >Đánh giả chuyến đi</a
               >
             </li>
             <li class="nav-item col-lg-4 col-12">
-              <a class="nav-link" href="#scrollspyHeading03"
+              <a class="nav-link" routerLink="/#scrollspyHeading03"
                 >Chuyến đi tương tự</a
               >
             </li>
@@ -328,7 +334,7 @@
                             <a
                               class="btn w-100 text-start p-0 fs-6 fw-bold d-flex align-items-center justify-content-between"
                               data-bs-toggle="collapse"
-                              href="#collapseExample"
+                              routerLink="/#collapseExample"
                               role="button"
                               aria-expanded="false"
                               aria-controls="collapseExample"
@@ -446,7 +452,7 @@
                             <a
                               class="btn w-100 text-start p-0 fs-6 fw-bold d-flex align-items-center justify-content-between"
                               data-bs-toggle="collapse"
-                              href="#collapseExample2"
+                              routerLink="/#collapseExample2"
                               role="button"
                               aria-expanded="false"
                               aria-controls="collapseExample2"
@@ -521,7 +527,7 @@
                                 </div>
                               </div>
                               <a
-                                href="#"
+                                routerLink="/#"
                                 class="text-success fw-bold text-decoration-none"
                                 >Hiển thị tất cả</a
                               >
@@ -764,7 +770,7 @@
               <h4 id="scrollspyHeading03">Chuyến đi tương tự</h4>
               <div class="row">
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -823,7 +829,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -882,7 +888,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -941,7 +947,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -1000,7 +1006,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -1059,7 +1065,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -1118,7 +1124,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">
@@ -1177,7 +1183,7 @@
                   </div>
                 </a>
                 <a
-                  href="detailprod"
+                  routerLink="/detailprod"
                   class="col-lg-3 col-md-4 mb-4 text-decoration-none"
                 >
                   <div class="card position-relative">

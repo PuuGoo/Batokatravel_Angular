@@ -10,7 +10,7 @@ import {
 import { CommonModule, JsonPipe } from '@angular/common';
 import { User } from '../db';
 import { Router, RouterModule } from '@angular/router';
-import { UserService } from '../services/user.service';
+import { LoginType, UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-signin',
@@ -23,6 +23,8 @@ import { UserService } from '../services/user.service';
 export class SigninComponent {
   userService: UserService = inject(UserService);
   isCheckLogin = '';
+  users: User[] = [];
+  message: string = '';
 
   submitSignInForm() {
     this.userService.getAllUsers().then((users) => {
@@ -33,16 +35,18 @@ export class SigninComponent {
         );
       });
       if (foundUser.length !== 0) {
-        this.isCheckLogin = 'true';
-        localStorage.setItem('isLogin', this.isCheckLogin);
-      } else {
-        this.isCheckLogin = 'false';
-        localStorage.setItem('isLogin', this.isCheckLogin);
-      }
-      if (this.isCheckLogin == 'true') {
+        this.userService.login(foundUser, LoginType.Login);
         this._router.navigateByUrl('');
       } else {
-        this._router.navigateByUrl('signin');
+        if (
+          this.users.filter(
+            (user) => user.username == this.applySignInForm.value.email
+          ).length === 0
+        ) {
+          this.message = 'Email không tồn tại.';
+        } else {
+          this.message = 'Đăng nhập không thành công.';
+        }
       }
     });
   }
@@ -89,8 +93,8 @@ export class SigninComponent {
   //   return foundUser;
   // }
   constructor(private _router: Router) {
-    if (localStorage.getItem('isLogin') == 'true') {
-      this._router.navigateByUrl('');
-    }
+    this.userService.getAllUsers().then((users) => {
+      this.users = users;
+    });
   }
 }

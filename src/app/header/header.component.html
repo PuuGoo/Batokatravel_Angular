@@ -5,14 +5,19 @@
       <nav class="navbar">
         <div class="container">
           <div class="col-2">
-            <a href="" class="navbar-brand">Batokatravel</a>
+            <a routerLink="/" class="navbar-brand">Batokatravel</a>
           </div>
           <div
-            class="col-8 d-none d-lg-block border-0 rounded-2 px-3 bg-body-tertiary"
+            class="col-8 d-none d-lg-block border-0 rounded-2 px-3 bg-body-tertiary position-relative"
           >
-            <form class="d-flex" role="search">
+            <form
+              class="d-flex"
+              role="search"
+              [formGroup]="applyFormSearch"
+              id="form-search"
+            >
               <div class="d-flex w-100">
-                <div class="dropdown border-end border-2 me-3">
+                <!-- <div class="dropdown border-end border-2 me-3">
                   <button
                     class="btn dropdown-toggle"
                     type="button"
@@ -24,21 +29,23 @@
                   <ul class="dropdown-menu">
                     @for(catelogy of catelogy; track catelogy) {
                     <li>
-                      <a class="dropdown-item" href="catelogies">{{
+                      <a class="dropdown-item" routerLink="/catelogies">{{
                         catelogy.name
                       }}</a>
                     </li>
                     }
                   </ul>
-                </div>
+                </div> -->
                 <div class="position-relative w-100">
                   <input
                     class="form-control me-2 border-0 bg-body-tertiary"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
+                    formControlName="keysearch"
+                    (input)="onChange()"
                   />
-                  <a href="catelogies" class="nav-link">
+                  <a routerLink="/catelogies" class="nav-link">
                     <i
                       class="bi bi-search position-absolute top-50 end-0 translate-middle"
                     ></i
@@ -46,9 +53,28 @@
                 </div>
               </div>
             </form>
+            <div
+              class="list-item-searched position-absolute z-1 right-0 start-0 end-0 d-{{
+                this.filterItems.length !== 0 &&
+                this.applyFormSearch.value.keysearch !== ''
+                  ? ''
+                  : 'none'
+              }}"
+            >
+              <ul class="list-group list-group-item-light">
+                @for (item of this.filterItems; track item) {
+                <li
+                  class="list-group-item border-0"
+                  style="cursor: pointer; padding-left: 28px !important"
+                >
+                  {{ item.name }}
+                </li>
+                }
+              </ul>
+            </div>
           </div>
           <div class="col-2 d-none d-lg-flex justify-content-end">
-            <a class="nav-link" href="cart"
+            <a class="nav-link" routerLink="/cart"
               ><i class="bi bi-cart me-4 fs-4"></i
             ></a>
             <div class="dropdown">
@@ -61,8 +87,33 @@
                 <i class="bi bi-person-circle fs-4"></i>
               </button>
               <ul class="dropdown-menu" style="width: fit-content">
-                <li><a class="dropdown-item" href="signin">Đăng nhập</a></li>
-                <li><a class="dropdown-item" href="logout">Đăng xuất</a></li>
+                <li>
+                  <a
+                    class="dropdown-item d-{{
+                      this.userService.userLogin.value ? 'none' : ''
+                    }}"
+                    [routerLink]="['signin']"
+                    >Đăng nhập</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-{{
+                      !this.userService.userLogin.value ? 'none' : ''
+                    }}"
+                    [routerLink]="['changepassword']"
+                    >Thay đổi mật khẩu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item d-{{
+                      !this.userService.userLogin.value ? 'none' : ''
+                    }}"
+                    (click)="logout()"
+                    >Đăng xuất</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -79,18 +130,20 @@
             <a
               class="nav-link active text-white ps-0 fs-5"
               aria-current="page"
-              href=""
+              [routerLink]="['']"
               >Trang chủ</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="#">Giới thiệu</a>
+            <a class="nav-link text-white fs-5" routerLink="/#">Giới thiệu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="contact">Liên hệ</a>
+            <a class="nav-link text-white fs-5" routerLink="/contact"
+              >Liên hệ</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="blog">Bài viết</a>
+            <a class="nav-link text-white fs-5" routerLink="/blog">Bài viết</a>
           </li>
           <div class="dropdown">
             <button
@@ -104,7 +157,7 @@
             <ul class="dropdown-menu">
               @for (catelogy of catelogy; track catelogy) {
               <li>
-                <a class="dropdown-item fs-5" href="catelogies">{{
+                <a class="dropdown-item fs-5" routerLink="/catelogies">{{
                   catelogy.name
                 }}</a>
               </li>
@@ -112,7 +165,16 @@
             </ul>
           </div>
           <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="#">Quản trị</a>
+            <a
+              class="nav-link text-white fs-5 d-{{
+                this.userService.user.length !== 0 &&
+                this.userService.user[0].role === 'admin'
+                  ? ''
+                  : 'none'
+              }}"
+              routerLink="/#"
+              >Quản trị</a
+            >
           </li>
         </div>
       </ul>

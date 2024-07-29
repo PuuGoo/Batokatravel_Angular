@@ -7,6 +7,7 @@
       <form [formGroup]="applySignInForm" (submit)="submitSignInForm()">
         <div class="border rounded-2 p-4" style="width: fit-content">
           <div class="ssu-title h2 text-center">Đăng nhập</div>
+          <div class="text-center text-danger fw-bold">{{ this.message }}</div>
           @if (this.isCheckLogin == "false") {
           <div class="text-center text-danger fw-bold">
             Tài khoản và mật khẩu không đúng!
@@ -55,7 +56,7 @@
             </div>
           </div>
 
-          <a href="forgotpassword" class="text-decoration-none">
+          <a routerLink="/forgotpassword" class="text-decoration-none">
             <div class="ssu-sign-up h6 text-end mb-2 text-primary my-2">
               Quên mật khẩu?
             </div>
@@ -65,7 +66,7 @@
               Đăng nhập
             </button>
 
-            <a href="signup">
+            <a [routerLink]="['/signup']">
               <button type="button" class="btn btn-outline-primary w-100">
                 Đăng ký
               </button>
