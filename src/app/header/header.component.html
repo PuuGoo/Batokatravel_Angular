@@ -56,18 +56,20 @@
             <div
               class="list-item-searched position-absolute z-1 right-0 start-0 end-0 d-{{
                 this.filterItems.length !== 0 &&
-                this.applyFormSearch.value.keysearch !== ''
+                this.applyFormSearch.value.keysearch !== '' 
                   ? ''
                   : 'none'
               }}"
+              id="result-search"
             >
               <ul class="list-group list-group-item-light">
                 @for (item of this.filterItems; track item) {
                 <li
                   class="list-group-item border-0"
                   style="cursor: pointer; padding-left: 28px !important"
+                  routerLink="catelogies"
                 >
-                  {{ item.name }}
+                  {{ item.name }} {{item.location}}
                 </li>
                 }
               </ul>
@@ -182,3 +184,4 @@
     </div>
   </div>
 </header>
+

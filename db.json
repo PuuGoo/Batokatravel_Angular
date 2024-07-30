@@ -2,14 +2,14 @@
   "catelogies": [
     {
       "id": "1",
-      "name": "Việt Nam",
+      "name": "Việt Nam",
       "image": "https://flagicons.lipis.dev/flags/4x3/vn.svg",
       "storage": 14,
       "isFeatured": true
     },
     {
       "id": "2",
-      "name": "Thái Lan",
+      "name": "Thái Lan",
       "image": "https://flagicons.lipis.dev/flags/4x3/th.svg",
       "storage": 20,
       "isFeatured": true
@@ -23,7 +23,7 @@
     },
     {
       "id": "4",
-      "name": "Lào",
+      "name": "Lào",
       "image": "https://flagicons.lipis.dev/flags/4x3/la.svg",
       "storage": 7,
       "isFeatured": true
@@ -63,7 +63,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "2",
@@ -77,13 +78,14 @@
       ],
       "rate_sale": 25,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "3",
       "price": 4800000,
       "price_sale": 4000000,
-      "name": "Khám phá Úc",
+      "name": "Khám phá Úc",
       "location": "Thành Phố Gippsland",
       "time": 5,
       "images": [
@@ -91,7 +93,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "4",
@@ -105,7 +108,8 @@
       ],
       "rate_sale": 15,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "5",
@@ -119,7 +123,8 @@
       ],
       "rate_sale": 20,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "6",
@@ -133,21 +138,23 @@
       ],
       "rate_sale": 25,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "7",
       "price": 9900000,
       "price_sale": 9000000,
       "name": "Khám phá Việt Nam",
-      "location": "Thành Phố Pháp",
+      "location": "Thành Phố Hồ Chí Minh",
       "time": 5,
       "images": [
         "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/365811879.jpg?k=9122d89251e088b8a977b3a02989ff12e6ebeb6688f1811581dcad564ee490c6&o=&s=600x"
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "8",
@@ -161,7 +168,8 @@
       ],
       "rate_sale": 10,
       "isSale": true,
-      "isFeatured": false
+      "isFeatured": false,
+      "isPopular": false
     },
     {
       "id": "9",
@@ -175,6 +183,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -189,6 +198,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -203,13 +213,14 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
       "id": "12",
       "price": 4000000,
       "price_sale": 0,
-      "name": "Khám phá Lào",
+      "name": "Khám phá Lào",
       "location": "Thành Phố Vang Viêng",
       "time": 4,
       "images": [
@@ -217,6 +228,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -231,6 +243,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -245,6 +258,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -259,6 +273,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     },
     {
@@ -273,6 +288,7 @@
       ],
       "rate_sale": 0,
       "isSale": false,
+      "isFeatured": false,
       "isPopular": true
     }
   ],
@@ -282,16 +298,22 @@
       "username": "user01@gmail.com",
       "password": "User01@batokatravel",
       "role": "admin"
+    },
+    {
+      "id": "f145",
+      "username": "user02@gmail.com",
+      "password": "Ai13031997AI!",
+      "role": "user"
     }
   ],
   "order": [
     {
-      "id": "6e4e",
+      "id": "6c4c",
       "idProd": {
         "id": "1",
         "price": 1100000,
         "price_sale": 1000000,
-        "name": "Khám phá Việt Nam",
+        "name": "Khám phá Việt Nam",
         "location": "Thành Phố Đà Nẵng",
         "time": 4,
         "images": [
@@ -300,172 +322,10 @@
         ],
         "rate_sale": 10,
         "isSale": true,
-        "isFeatured": false
+        "isFeatured": false,
+        "isPopular": false
       },
-      "quantity": "4"
-    },
-    {
-      "id": "f357",
-      "idProd": {
-        "id": "3",
-        "price": 4800000,
-        "price_sale": 4000000,
-        "name": "Khám phá Úc",
-        "location": "Thành Phố Gippsland",
-        "time": 5,
-        "images": [
-          "https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "3"
-    },
-    {
-      "id": "bd36",
-      "idProd": {
-        "id": "4",
-        "price": 6250000,
-        "price_sale": 5000000,
-        "name": "Khám phá Lào",
-        "location": "Thành Phố Muang Xai",
-        "time": 4,
-        "images": [
-          "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSuWlU6WKPAmsQ0YwKARbu0TzL3ZwPVgy_N_F8KRDVVFztyz38Ncna5R8JwOX7oTQwvmMRvN3Ro6eut042zt5kG9JD8aP3IpXYoKZ91Bg"
-        ],
-        "rate_sale": 15,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "2"
-    },
-    {
-      "id": "65da",
-      "idProd": {
-        "id": "3",
-        "price": 4800000,
-        "price_sale": 4000000,
-        "name": "Khám phá Úc",
-        "location": "Thành Phố Gippsland",
-        "time": 5,
-        "images": [
-          "https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "4"
-    },
-    {
-      "id": "8634",
-      "idProd": {
-        "id": "7",
-        "price": 9900000,
-        "price_sale": 9000000,
-        "name": "Khám phá Việt Nam",
-        "location": "Thành Phố Pháp",
-        "time": 5,
-        "images": [
-          "https://q-xx.bstatic.com/xdata/images/hotel/max1280x900/365811879.jpg?k=9122d89251e088b8a977b3a02989ff12e6ebeb6688f1811581dcad564ee490c6&o=&s=600x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "3"
-    },
-    {
-      "id": "79ef",
-      "idProd": {
-        "id": "3",
-        "price": 4800000,
-        "price_sale": 4000000,
-        "name": "Khám phá Úc",
-        "location": "Thành Phố Gippsland",
-        "time": 5,
-        "images": [
-          "https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "4"
-    },
-    {
-      "id": "da7b",
-      "idProd": {
-        "id": "3",
-        "price": 4800000,
-        "price_sale": 4000000,
-        "name": "Khám phá Úc",
-        "location": "Thành Phố Gippsland",
-        "time": 5,
-        "images": [
-          "https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "4"
-    },
-    {
-      "id": "c184",
-      "idProd": {
-        "id": "3",
-        "price": 4800000,
-        "price_sale": 4000000,
-        "name": "Khám phá Úc",
-        "location": "Thành Phố Gippsland",
-        "time": 5,
-        "images": [
-          "https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "4"
-    },
-    {
-      "id": "3e81",
-      "idProd": {
-        "id": "3",
-        "price": 4800000,
-        "price_sale": 4000000,
-        "name": "Khám phá Úc",
-        "location": "Thành Phố Gippsland",
-        "time": 5,
-        "images": [
-          "https://pix8.agoda.net/hotelImages/687/687154/687154_14080609040020704429.jpg?ca=2&ce=1&s=1280x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "3"
-    },
-    {
-      "id": "080f",
-      "idProd": {
-        "id": "1",
-        "price": 1100000,
-        "price_sale": 1000000,
-        "name": "Khám phá Việt Nam",
-        "location": "Thành Phố Đà Nẵng",
-        "time": 4,
-        "images": [
-          "https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x",
-          "https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false
-      },
-      "quantity": "3"
+      "quantity": 89
     }
   ]
 }

@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, Renderer2 } from '@angular/core';
 import { Catelogy, Product } from '../db';
 import { CommonModule, NgForOf } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
@@ -32,10 +32,15 @@ export class HeaderComponent {
     );
     console.log(this.filterItems);
   }
-  constructor(private router: Router) {
+  constructor(private router: Router, private render: Renderer2) {
     this.productService.getAllProducts().then((products) => {
       this.products = products;
     });
+
+    // this.render.listen('window', 'click', (e:Event) => {
+    //   console.log(e);
+      
+    // })
   }
 
   logout() {

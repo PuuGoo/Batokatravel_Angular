@@ -14,6 +14,16 @@ export class OrderService {
     });
   }
 
+  updateOrder(idOrder: number, quantity: number) {
+    return this.http.patch(`${this.url}/${idOrder}`, {
+      quantity: quantity,
+    });
+  }
+
+  deleteOrder(idOrder: number) {
+    return this.http.delete(`${this.url}/${idOrder}`);
+  }
+
   async getAllOrder(): Promise<Order[]> {
     const data = await fetch(this.url);
     return (await data.json()) ?? {};

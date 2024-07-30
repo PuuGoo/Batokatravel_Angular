@@ -38,22 +38,24 @@
                   </th>
                   <td class="d-flex align-items-center">
                     <img
-                      src="{{order.idProd.images[0]}}"
+                      src="{{ order.idProd.images[0] }}"
                       alt=""
                       width="50"
                       height="50"
                     />
                     <div class="cart-prodname ms-3 h6">
-                      {{order.idProd.name}}
+                      {{ order.idProd.name }}
                     </div>
                   </td>
-                  <td>{{order.idProd.price}} VND</td>
+                  <td>{{ order.idProd.price }} VND</td>
                   <td>
                     <select
                       class="form-select w-75"
                       aria-label="Default select example"
                     >
-                      <option selected value="{{order.quantity}}">{{order.quantity}}</option>
+                      <option selected value="{{ order.quantity }}">
+                        {{ order.quantity }}
+                      </option>
                       <option value="1">2</option>
                       <option value="2">3</option>
                       <option value="3">4</option>

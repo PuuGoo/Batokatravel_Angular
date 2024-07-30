@@ -34,7 +34,7 @@ export class HomeComponent {
         (value, index) => value.id <= 6 && value.isFeatured == true
       );
     });
-    console.log(this.userService.user);
+    // console.log(this.userService.user);
     
     this.productService.getAllProducts().then((products: Product[]) => {
       this.productsSale = products.filter(
