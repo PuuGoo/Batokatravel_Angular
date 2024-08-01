@@ -14,6 +14,9 @@ import { SignupComponent } from './signup/signup.component';
 import { inject } from '@angular/core';
 import { LoginType, UserService } from './services/user.service';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { OrderService } from './services/order.service';
+import { Order } from './db';
+
 export const routes: Routes = [
   {
     path: 'addressShipping',
@@ -32,6 +35,11 @@ export const routes: Routes = [
   },
   {
     path: 'cart',
+    component: CartComponent,
+    title: 'Cart page',
+  },
+  {
+    path: 'cart/:id',
     component: CartComponent,
     title: 'Cart page',
   },

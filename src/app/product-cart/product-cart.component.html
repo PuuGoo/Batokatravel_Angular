@@ -8,8 +8,8 @@
   <div class="card-body">
     @if(productSale.isSale == true) {
     <p class="card-text text-primary h5">
-      {{ productSale.price_sale }} VND
-      <del class="h6 text-secondary">{{ productSale.price }} VND</del>
+      {{ productSale.price_sale | currency: 'VND' : 'đồng' : "0.0-0" :'vi' }} 
+      <del class="h6 text-secondary">{{ productSale.price | currency: 'VND' : 'đồng' : "0.0-0" :'vi'}} </del>
     </p>
     <div
       class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
@@ -19,7 +19,7 @@
       >{{ productSale.rate_sale }}%
     </div>
     } @else {
-    <p class="card-text text-primary h5">{{ productSale.price }} VND</p>
+    <p class="card-text text-primary h5">{{ productSale.price | currency: 'VND' : 'đồng' : "0.0-0" :'vi'}} </p>
     <div
       class="pt-rate border rounded-4 w-25 text-center h6 py-1 position-absolute bg-white"
       style="top: 16px"

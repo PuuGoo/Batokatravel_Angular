@@ -32,3 +32,9 @@ export interface Order {
   idProd: Product;
   quantity: number;
 }
+
+export interface Voucher {
+  id: number,
+  name: string,
+  value: number
+}

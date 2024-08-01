@@ -28,9 +28,14 @@ export class AppComponent {
   dbService: CatelogyService = inject(CatelogyService);
   isCheckLogin: string = '';
 
+
+
+
   constructor() {
     this.dbService.getAllCatelogies().then((catelogies: Catelogy[]) => {
       this.catelogies = catelogies;
     });
+
+
   }
 }

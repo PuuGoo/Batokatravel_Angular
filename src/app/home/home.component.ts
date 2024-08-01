@@ -20,6 +20,7 @@ import { UserService } from '../services/user.service';
   styleUrl: './home.component.css',
   providers: [],
 })
+
 export class HomeComponent {
   catelogies: Catelogy[] = [];
   productsSale: Product[] = [];
@@ -45,4 +46,6 @@ export class HomeComponent {
       );
     });
   }
+
+
 }

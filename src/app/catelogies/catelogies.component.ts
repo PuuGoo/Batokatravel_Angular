@@ -7,6 +7,9 @@ import { Catelogy, Product } from '../db';
 import { CommonModule } from '@angular/common';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { CatelogyService } from '../services/catelogy.service';
+import { RouterModule } from '@angular/router';
+import { windowCount } from 'rxjs';
+
 @Component({
   selector: 'app-catelogies',
   standalone: true,
@@ -16,6 +19,7 @@ import { CatelogyService } from '../services/catelogy.service';
     ProductCartComponent,
     CommonModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   templateUrl: './catelogies.component.html',
   styleUrl: './catelogies.component.css',
@@ -200,5 +204,7 @@ export class CatelogiesComponent {
     this.catelogyService.getAllCatelogies().then((cats) => {
       this.catelogy = cats;
     });
+
+    window.scrollTo(0,0);
   }
 }

@@ -76,9 +76,15 @@
             </div>
           </div>
           <div class="col-2 d-none d-lg-flex justify-content-end">
-            <a class="nav-link" routerLink="/cart"
-              ><i class="bi bi-cart me-4 fs-4"></i
-            ></a>
+            <a class="nav-link position-relative me-3" routerLink="/cart"
+              ><i class="bi bi-cart fs-4"></i
+            >
+            @if(this.orderService.orders.length !== 0) {
+              <span class="position-absolute start-100 translate-middle badge rounded-pill bg-danger z-1" style="top: 10px" id="quantityCart">
+                {{this.orderService.orders.length}}
+              </span>
+            }
+          </a>
             <div class="dropdown">
               <button
                 class="border-0 bg-white"

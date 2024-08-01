@@ -188,6 +188,8 @@
                 *ngFor="let productSale of filteredProducts"
                 [productSale]="productSale"
                 class="col-lg-4 col-md-6 mb-4 text-decoration-none"
+                [routerLink]="['/detailprod', productSale.id]"
+                style="cursor: pointer;"
               ></app-product-cart>
             </div>
             <div class="row">

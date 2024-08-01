@@ -23,7 +23,7 @@ export class DetailprodComponent {
   idOrder: number = -1;
 
   orderApply: FormGroup = new FormGroup({
-    quantity: new FormControl(''),
+    quantity: new FormControl(1),
   });
 
   orderSubmit() {
@@ -65,14 +65,15 @@ export class DetailprodComponent {
         .subscribe((res) => {
           console.log(res);
         });
-
       this.router.navigateByUrl('/cart');
     }
 
     this.orderService.getAllOrder().then((orders) => {
       this.orders = orders;
+      this.orderService.orders = orders;
     });
   }
+
   constructor(private router: Router) {
     this.idProd = Number(this.route.snapshot.params['id']);
     this.productService.getProductById(this.idProd).then((result) => {
@@ -82,5 +83,10 @@ export class DetailprodComponent {
     this.orderService.getAllOrder().then((orders) => {
       this.orders = orders;
     });
+
+    window.scrollTo(0,0);
   }
+
+ 
+
 }

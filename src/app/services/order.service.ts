@@ -7,6 +7,8 @@ import { Order } from '../db';
 })
 export class OrderService {
   url = 'http://localhost:3000/order';
+  orders: Order[] = [];
+  
   addOrder(idProd: object, quantity: number) {
     return this.http.post(this.url, {
       idProd: idProd,

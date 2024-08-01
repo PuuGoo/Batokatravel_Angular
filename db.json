@@ -306,26 +306,12 @@
       "role": "user"
     }
   ],
-  "order": [
+  "order": [],
+  "voucher": [
     {
-      "id": "6c4c",
-      "idProd": {
-        "id": "1",
-        "price": 1100000,
-        "price_sale": 1000000,
-        "name": "Khám phá Việt Nam",
-        "location": "Thành Phố Đà Nẵng",
-        "time": 4,
-        "images": [
-          "https://pix8.agoda.net/geo/poi/51323/2_51323_03.jpg?ca=7&ce=1&s=600x",
-          "https://pix8.agoda.net/geo/poi/222405/2_222405.jpg?ca=6&ce=1&s=600x"
-        ],
-        "rate_sale": 10,
-        "isSale": true,
-        "isFeatured": false,
-        "isPopular": false
-      },
-      "quantity": 89
+      "id": "1",
+      "name": "giamgia10%",
+      "value": 0.1
     }
   ]
 }
